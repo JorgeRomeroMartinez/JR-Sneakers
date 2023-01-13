@@ -1,0 +1,23 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* body {
+  background-color: #323232;
+  font-family: "Lato";
+  color: #ffffff;
+  cursor: default;
+  min-width: 100%;
+} */
+
+body {
+  background-image: url(../img/fondo1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Lato";
+  color: #ffffff;
+  cursor: default;
+  min-width: 100%;
+}

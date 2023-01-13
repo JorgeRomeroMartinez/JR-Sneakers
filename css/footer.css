@@ -1,0 +1,53 @@
+.footer {
+  width: auto;
+  height: auto;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(2px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  text-align: center;
+  color: #fdfdfd;
+  position: relative;
+  bottom: 0;
+  z-index: 0;
+}
+
+.avisos {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.avisosp {
+  font-size: 15px;
+  margin-left: 30%;
+}
+.contactos1 {
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  font-size: 30px;
+}
+.contactos2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 15px;
+}
+.icono {
+  color: #fdfdfd;
+  font-size: 40px;
+}
+.icono:hover {
+  color: #fdfdfd;
+  text-shadow: 0px 0px 20px #14ffec;
+}
+.copyright {
+  font-size: 12px;
+  display: flex;
+  align-items: flex-end;
+  padding-top: 10px;
+}

@@ -1,0 +1,137 @@
+.modal_tarjeta {
+  position: fixed;
+  z-index: 1000;
+  width: 100vw;
+  height: 100%;
+
+  backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 30px;
+}
+.elmodal_tarjeta {
+  width: 35vw;
+  height: 580px;
+  background-image: linear-gradient(
+    to right top,
+    #323232,
+    #3a3f49,
+    #364f5f,
+    #266170,
+    #0d7377
+  );
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-right-color: rgba(255, 255, 255, 0.1);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+  position: relative;
+  transition: transforma 1s;
+  transform: translateY(0%);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.close_tarjeta {
+  position: absolute;
+  margin-top: 10px;
+  right: 10px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 30px;
+}
+.titulo_tarjeta {
+  text-decoration: underline 2px;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.close_tarjeta:hover {
+  color: #323232;
+}
+.text_tarjeta {
+  text-align-last: left;
+  margin-top: 40px;
+  margin-left: 25px;
+  font-size: 18px;
+}
+.div_input_tarjeta {
+  width: 100%;
+  margin-top: 40px;
+  margin-left: 10px;
+  font-size: 18px;
+}
+.input_tarjeta {
+  background-color: transparent;
+  border: 1px solid;
+  border-radius: 4px;
+  color: #e0e0e0;
+  height: 35px;
+  text-align: center;
+  font-size: 18px;
+  margin-right: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.btn_pagar {
+  height: 40px;
+  width: 20vw;
+  margin-top: 20px;
+  background-color: #0d7377;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  transition: 0.5s;
+}
+.btn_pagar:hover {
+  width: 22vw;
+  height: 50px;
+  font-size: 25px;
+  box-shadow: 0px 0px 20px #14ffec;
+}
+
+@media (max-width: 992px) {
+  .elmodal_tarjeta {
+    width: 80vw;
+    height: 580px;
+  }
+  .btn_pagar {
+    width: 40vw;
+  }
+  .btn_pagar:hover {
+    width: 42vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .elmodal_tarjeta {
+    width: 80vw;
+    height: 600px;
+  }
+  .titulo_tarjeta {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  .btn_pagar {
+    width: 40vw;
+  }
+  .btn_pagar:hover {
+    width: 42vw;
+  }
+  .text_tarjeta {
+    margin-left: 10px;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  .div_input_tarjeta {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  .input_tarjeta {
+    font-size: 14px;
+    width: 65vw;
+  }
+}

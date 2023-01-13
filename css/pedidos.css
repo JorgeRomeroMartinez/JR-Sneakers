@@ -1,0 +1,101 @@
+.tabla_pedidos {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(2px);
+  border-radius: 8px;
+  border: solid 1px #14ffec;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+}
+.tabla_datos {
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: center;
+  backdrop-filter: blur(2px);
+  border-radius: 8px;
+  border: solid 1px #14ffec;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+  font-size: 24px;
+  width: 40%;
+}
+
+.precio_total_pedidos {
+  font-size: 25px;
+}
+
+.precio_total_pedidos1 {
+  color: #0d7377;
+  text-shadow: 1px 1px 1px #14ffec;
+  font-size: 30px;
+}
+
+.pedidos_titulo {
+  font-size: 50px;
+  text-decoration: underline;
+}
+.btn_home {
+  --color: #0d7377;
+  --color2: rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 40px;
+  background-color: transparent;
+  transition: 0.5s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  font-size: 15px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 8px;
+  color: #e0e0e0;
+  border: solid 1px #14ffec;
+}
+
+.btn_home::before {
+  content: "";
+  display: block;
+  height: 110%;
+  width: 310%;
+  transform: translate(0, -50%);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: -1;
+  transition: 1s;
+  background: -moz-linear-gradient(45deg, var(--color2) 33%, var(--color) 66%);
+  background: -webkit-linear-gradient(
+    45deg,
+    var(--color2) 33%,
+    var(--color) 66%
+  );
+  background: linear-gradient(45deg, var(--color2) 33%, var(--color) 66%);
+}
+.btn_home:hover::before {
+  left: -200%;
+}
+
+.btn_home:active {
+  transform: scale(0.98);
+  filter: brightness(0.8);
+}
+@media (max-width: 992px) {
+  .tabla_datos {
+    width: 80vw !important;
+    font-size: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .pedidos_titulo {
+    margin-top: 20px;
+    margin-bottom: -20px !important;
+    font-size: 40px;
+  }
+  .tabla_datos {
+    width: 90vw !important;
+  }
+  .tabla_pedidos {
+    font-size: 10px;
+  }
+}

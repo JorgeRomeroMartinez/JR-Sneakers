@@ -1,0 +1,279 @@
+.img_carrito {
+  font-size: 20px;
+  color: #ffffff;
+}
+.button_carrito {
+  --color: #0d7377;
+  --color2: rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 35px;
+  background-color: transparent;
+  transition: 0.5s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  font-size: 15px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 8px;
+}
+
+.button_carrito::before {
+  content: "";
+  display: block;
+  height: 110%;
+  width: 310%;
+  transform: translate(0, -50%);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: -1;
+  transition: 1s;
+  background: -moz-linear-gradient(45deg, var(--color2) 33%, var(--color) 66%);
+  background: -webkit-linear-gradient(
+    45deg,
+    var(--color2) 33%,
+    var(--color) 66%
+  );
+  background: linear-gradient(45deg, var(--color2) 33%, var(--color) 66%);
+}
+.button_carrito:hover::before {
+  left: -200%;
+}
+
+.button_carrito:hover .img_carrito {
+  transition: 0.7s;
+}
+.button_carrito:active {
+  transform: scale(0.98);
+  filter: brightness(0.8);
+}
+
+.open_carrito {
+  display: flex;
+  justify-content: end;
+}
+
+.modal_carrito {
+  position: fixed;
+  z-index: 1000;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: end;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 30px;
+}
+.elmodal_carrito {
+  width: 500px;
+  height: 100%;
+  background-color: #323232dc;
+  border: 1px solid #323232;
+  text-align: center;
+  position: relative;
+  transition: 1s;
+  overflow: auto;
+
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 19px 38px,
+    rgba(0, 0, 0, 0.32) 0px 15px 12px;
+}
+
+.elmodal_carrito::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+.elmodal_carrito::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0); /* color of the tracking area */
+}
+
+.elmodal_carrito::-webkit-scrollbar-thumb {
+  background-color: #0d7377; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid rgba(255, 255, 255, 0); /* creates padding around scroll thumb */
+}
+
+.close_carrito {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: inline-block;
+  color: #0d7377;
+  cursor: pointer;
+}
+.close_carrito:hover {
+  color: #14ffec;
+}
+.modal_close_carrito {
+  transform: translateY(0%);
+}
+.titulo_carrito {
+  margin: 12px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  align-items: flex-start;
+  justify-items: center;
+  font-size: 40px;
+  border-bottom: solid 1px #ffffff;
+}
+.carrito_producto {
+  display: flex;
+  justify-content: left;
+  text-align: left;
+  margin: 12px;
+  margin-top: 50px;
+  border-bottom: solid 1px #ffffff;
+}
+.img_zapatilla_carrito {
+  width: 100%;
+  height: 80%;
+}
+.nombre_zapatilla_carrito {
+  text-align: center;
+  font-size: 16px;
+}
+.precio_zapatilla_carrito {
+  text-align: end;
+  font-size: 30px;
+  font-weight: 900;
+  color: #0d7377;
+  text-shadow: 1px 1px 1px #14ffec;
+  margin-top: 30px;
+}
+
+.btn_carrito_comprar {
+  --color: #0d7377;
+  --color2: rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 50px;
+  background-color: transparent;
+  transition: 0.5s ease;
+  position: relative;
+  bottom: 10px;
+  margin-left: 9%;
+  margin-top: 40px;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: solid 1px #0d7377;
+  border-radius: 8px;
+}
+
+.btn_carrito_comprar::before {
+  content: "";
+  display: block;
+  height: 110%;
+  width: 310%;
+  transform: translate(0, -50%);
+  position: absolute;
+  top: 50%;
+  left: -5%;
+  z-index: -1;
+  transition: 1s;
+  background: -moz-linear-gradient(45deg, var(--color2) 33%, var(--color) 66%);
+  background: -webkit-linear-gradient(
+    45deg,
+    var(--color2) 33%,
+    var(--color) 66%
+  );
+  background: linear-gradient(45deg, var(--color2) 33%, var(--color) 66%);
+}
+.btn_carrito_comprar:hover::before {
+  left: -200%;
+}
+.btn_carrito_comprar:hover {
+  color: #ffffff;
+}
+.btn_carrito_comprar:hover .img_carrito {
+  color: #212121;
+  transition: 0.7s;
+}
+.btn_carrito_comprar:active {
+  transform: scale(0.98);
+  filter: brightness(0.8);
+}
+.eliminar_zapatilla_carrito1 {
+  width: 40px;
+  border: none;
+  background: none;
+  display: inline-block;
+  color: #0d7377;
+
+  cursor: pointer;
+}
+.eliminar_zapatilla_carrito1:hover {
+  color: #14ffec;
+}
+.titulo_precio_carrito {
+  margin-left: 9%;
+  font-size: 30px;
+  text-align: left;
+}
+.precio_total_carrito {
+  font-size: 40px;
+  font-weight: 800;
+  color: #0d7377;
+  text-shadow: 1px 1px 1px #14ffec;
+  text-align: right;
+  margin-right: 12px;
+}
+.margen {
+  margin-top: 100px;
+}
+@media (max-width: 1400px) {
+  .titulo_carrito {
+    font-size: 30px;
+  }
+  .precio_zapatilla_carrito {
+    font-size: 25px;
+  }
+  .nombre_zapatilla_carrito {
+    font-size: 14px;
+  }
+  .elmodal_carrito {
+    width: 400px;
+  }
+  .carrito_producto {
+    margin-top: 30px;
+  }
+  .titulo_carrito {
+    margin-bottom: 20px;
+  }
+  .titulo_precio_carrito {
+    font-size: 20px;
+  }
+  .img_zapatilla_carrito {
+    width: 100%;
+    height: 70%;
+  }
+  .precio_total_carrito {
+    font-size: 25px;
+  }
+}
+@media (max-width: 767px) {
+  .elmodal_carrito {
+    width: 100vw !important;
+  }
+  .img_zapatilla_carrito {
+    width: 100%;
+    height: 60%;
+  }
+  .titulo_precio_carrito {
+    font-size: 20px !important;
+  }
+  .precio_total_carrito {
+    font-size: 25px !important;
+  }
+}

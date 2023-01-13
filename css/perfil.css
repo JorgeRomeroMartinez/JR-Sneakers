@@ -1,0 +1,57 @@
+.button_perfil {
+  --color: #0d7377;
+  --color2: rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 35px;
+  background-color: transparent;
+  transition: 0.5s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  font-size: 15px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 8px;
+}
+
+.button_perfil::before {
+  content: "";
+  display: block;
+  height: 110%;
+  width: 310%;
+  transform: translate(0, -50%);
+  position: absolute;
+  top: 50%;
+  left: -5%;
+  z-index: -1;
+  transition: 1s;
+  background: -moz-linear-gradient(45deg, var(--color2) 33%, var(--color) 66%);
+  background: -webkit-linear-gradient(
+    45deg,
+    var(--color2) 33%,
+    var(--color) 66%
+  );
+  background: linear-gradient(45deg, var(--color2) 33%, var(--color) 66%);
+}
+.button_perfil:hover::before {
+  left: -200%;
+}
+
+.button_perfil:hover .img_carrito {
+  transition: 0.7s;
+}
+.button_perfil:active {
+  transform: scale(0.98);
+  filter: brightness(0.8);
+}
+
+@media (max-width: 767px) {
+  .btn_home {
+    width: 40vw !important;
+    height: 30px !important;
+  }
+}

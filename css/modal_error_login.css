@@ -1,0 +1,45 @@
+.modal_error_login {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+}
+.error_login {
+  width: 500px;
+  height: 200px;
+  background-color: #003855;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  transition: transforma 1s;
+  transform: translateY(0%);
+  border-radius: 10px;
+}
+.close_error_login {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: red;
+  color: white;
+  line-height: 25px;
+  cursor: pointer;
+  border-radius: 50px;
+}
+.modal_error_login_close {
+  transform: translateY(0%);
+}
